@@ -1,0 +1,23 @@
+# Copy this file to terraform.tfvars and customize for your lab
+
+# AWS Region Configuration
+aws_region      = "us-east-1"
+backup_region   = "us-west-2"
+
+# Lab Configuration
+lab_name = "paculabs"
+
+# Compromised User Password
+# IMPORTANT: Change this in production labs!
+student_password = "ChangeMe123!"
+
+# Feature Flags
+enable_cloudtrail          = true
+enable_cross_region_exfil  = true
+
+# Cost Optimization (for free tier)
+# Set these to false to minimize costs
+enable_secrets_manager         = false  # Costs $0.40/secret/month (NOT free tier)
+enable_vpc_interface_endpoints = false  # Costs ~$0.01/hour (NOT free tier)
+# Note: S3 Gateway Endpoint is always free, so it's always enabled
+
